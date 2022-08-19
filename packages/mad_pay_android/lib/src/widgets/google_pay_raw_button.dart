@@ -72,8 +72,7 @@ class RawGooglePayButton extends StatelessWidget {
     }
 
     final String? langCode = Localizations.maybeLocaleOf(context)?.languageCode;
-    final String? supportedLangCode =
-        _supportedLocales.contains(langCode) ? langCode : _defaultLocale;
+    final String? supportedLangCode = _supportedLocales.contains(langCode) ? langCode : _defaultLocale;
 
     return 'assets/$supportedLangCode/$assetName';
   }
@@ -99,8 +98,7 @@ class RawGooglePayButton extends StatelessWidget {
           : null,
       height: defaultButtonHeight,
       child: RawMaterialButton(
-        fillColor:
-            style == GooglePayButtonStyle.black ? Colors.black : Colors.white,
+        fillColor: style == GooglePayButtonStyle.black ? Colors.black : Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 24),
         elevation: 0,
         focusElevation: 0,
@@ -108,7 +106,7 @@ class RawGooglePayButton extends StatelessWidget {
         highlightElevation: 0,
         onPressed: onPressed,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: BorderRadius.circular(25),
           side: style == GooglePayButtonStyle.flat
               ? const BorderSide(
                   color: Color(0xFFDEDEDE),
